@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-employee',
@@ -11,7 +13,12 @@ export class AddEmployeeComponent implements OnInit {
 
   name: string = "";
   description: string = "";
-  constructor() { }
+  showAddEmployee: boolean = false;
+  subscription: Subscription = new Subscription();
+
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddEmployee = value);
+   }
 
   ngOnInit(): void {
   }
@@ -36,5 +43,6 @@ export class AddEmployeeComponent implements OnInit {
 
     this.name ="";
     this.description = "";
+    this.showAddEmployee = false;
   }
 }

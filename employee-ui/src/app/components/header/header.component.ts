@@ -9,12 +9,11 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  showAddEmpoyee: boolean = false;
+  showAddEmployee: boolean = false;
   subscription: Subscription = new Subscription();
 
   constructor(private uiService: UiService) {
-    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddEmpoyee = value);
-
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddEmployee = value);
   }
 
   ngOnInit(): void {
