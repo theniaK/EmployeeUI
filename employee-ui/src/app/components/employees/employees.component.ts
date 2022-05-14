@@ -24,14 +24,14 @@ export class EmployeesComponent implements OnInit {
   }
 
   onDelete(employee: Employee){
-
+    this.employeeService.deleteEmployee(employee).subscribe(() => (this.employees = this.employees.filter(t => t.id != employee.id)));
   }
 
   onUpdate(employee: Employee){
-
+    console.log("update");
   }
 
   onEmployeeInfo(employee: Employee){
-    
+    console.log(employee.description);
   }
 }
