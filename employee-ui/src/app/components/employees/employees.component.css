@@ -1,0 +1,15 @@
+.employee{
+    background-color: #F0F0F0;
+    padding: 20px, 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    width: 100%;
+    border: 10px solid #F0F0F0;
+    border-radius: 3px;
+}
+
+.bigIcon{
+    font-size: 19px;
+}

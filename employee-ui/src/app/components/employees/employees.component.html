@@ -1,0 +1,6 @@
+<app-add-employee></app-add-employee>
+<h2 class="employee" *ngFor="let employee of employees">{{employee.name}}
+    <fa-icon class="bigIcon" (click)="onDelete(employee)" [ngStyle]="{'color': 'red', 'float': 'right'}" [icon]="faTimes"></fa-icon>
+    <fa-icon class="bigIcon" (click)="onUpdate(employee)" [ngStyle]="{'color': 'grey', 'float': 'right', 'margin-right': '15px'}" [icon]="faEdit"></fa-icon>
+    <fa-icon class="bigIcon" (click)="onEmployeeInfo(employee)" [ngStyle]="{'color': 'grey', 'float': 'left', 'margin-right': '15px'}" [icon]="faInfo"></fa-icon>
+</h2>
