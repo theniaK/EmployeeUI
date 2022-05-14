@@ -15,7 +15,7 @@
   line-height: 20px;
   padding: 6px 16px;
   height: 50px;
-  width: 80px;
+  width: 140px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -24,8 +24,8 @@
   touch-action: manipulation;
   vertical-align: middle;
   white-space: nowrap;
-  margin-left: 50px;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .btn:hover {
