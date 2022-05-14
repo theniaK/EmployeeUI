@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  showAddEmpoyee: boolean = false;
+  subscription: Subscription = new Subscription();
+
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddEmpoyee = value);
+
+  }
 
   ngOnInit(): void {
   }
 
   toggleButton(){
-    console.log("toggle");
+    this.uiService.toggleAddEmployee();
   }
 }

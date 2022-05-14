@@ -34,4 +34,15 @@ export class EmployeesComponent implements OnInit {
   onEmployeeInfo(employee: Employee){
     console.log(employee.description);
   }
+
+  addEmployee(employee: Employee){
+    this.employees.forEach( element =>{
+      if(element.name === employee.name){
+        alert("This employee exists!");
+        throw "exit";
+      }
+    });
+    
+    this.employeeService.postEmployee(employee).subscribe(() => (this.employees.unshift(employee)));
+  }
 }
