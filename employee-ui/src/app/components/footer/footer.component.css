@@ -1,0 +1,16 @@
+footer{
+    background-color: #E8E8E8;
+}
+
+div{
+    margin-left: 35%;
+}
+
+p{
+    height: 45px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 2px;
+    color: rgb(13, 95, 54);
+    display: inline-block;
+    margin-left: 15px;
+}

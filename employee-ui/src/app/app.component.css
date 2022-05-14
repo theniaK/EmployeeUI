@@ -1,3 +1,17 @@
 .container{
     margin-left: 30%;
 }
+
+.title{
+    background-color: #E8E8E8;
+}
+
+h1{
+    height: 45px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 2px;
+    margin-left: 5%;
+    color: rgb(13, 95, 54);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
